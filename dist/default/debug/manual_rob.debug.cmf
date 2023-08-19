@@ -11,19 +11,22 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\hirot\AppData\Local\Temp\xcAsueg.o
+$C:\Users\hirot\AppData\Local\Temp\xcAs11nk.o
 idloc IDLOC 5 8000 8000 4 2 1
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 3 3 2 2 1
 config CONFIG 4 8007 8007 2 2 1
 $dist/default/debug\manual_rob.debug.o
-cinit CODE 0 7FC 7FC 4 2 1
+cinit CODE 0 7F1 7F1 F 2 1
 idloc IDLOC 5 8000 8000 4 2 1
-text1 CODE 0 796 796 B 2 1
-text2 CODE 0 7A1 7A1 27 2 1
-maintext CODE 0 7C8 7C8 34 2 1
-cstackCOMMON COMMON 1 70 70 4 1 1
-bssCOMMON COMMON 1 74 74 1 1 1
+text1 CODE 0 7AD 7AD 44 2 1
+text2 CODE 0 745 745 5 2 1
+text3 CODE 0 761 761 13 2 1
+text4 CODE 0 74A 74A B 2 1
+maintext CODE 0 774 774 39 2 1
+cstackCOMMON COMMON 1 70 70 6 1 1
+clrtext CODE 0 755 755 C 2 1
+bssCOMMON COMMON 1 76 76 1 1 1
 config CONFIG 4 8007 8007 2 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -33,17 +36,13 @@ config CONFIG 4 8007 8007 2 2 1
 %UNUSED
 RAM 20-6F 1
 RAM A0-EF 1
-RAM 120-16F 1
-RAM 1A0-1EF 1
-RAM 220-23F 1
+RAM 120-15F 1
 BANK0 20-6F 1
 BANK1 A0-EF 1
-BANK2 120-16F 1
-BANK3 1A0-1EF 1
-BANK4 220-23F 1
-CONST 5-795 2
+BANK2 120-15F 1
+CONST 5-744 2
 CONST 800-FFF 2
-ENTRY 5-795 2
+ENTRY 5-744 2
 ENTRY 800-FFF 2
 SFR10 500-56F 1
 SFR11 580-5EF 1
@@ -67,7 +66,7 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-CODE 5-795 2
+CODE 5-744 2
 CODE 800-FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -80,11 +79,11 @@ SFR7 380-3EF 1
 SFR8 400-46F 1
 SFR9 480-4EF 1
 BIGRAM 2000-215F 1
-COMMON 75-7D 1
+COMMON 77-7D 1
 EEDATA F000-F0FF 2
-STRCODE 5-795 2
+STRCODE 5-744 2
 STRCODE 800-FFF 2
-STRING 5-795 2
+STRING 5-744 2
 STRING 800-FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -100,50 +99,89 @@ STRING 800-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/debug\manual_rob.debug.o
-7FC cinit CODE >795:C:\Users\hirot\AppData\Local\Temp\xcAsueg.s
-7FC cinit CODE >798:C:\Users\hirot\AppData\Local\Temp\xcAsueg.s
-7FC cinit CODE >810:C:\Users\hirot\AppData\Local\Temp\xcAsueg.s
-7FD cinit CODE >816:C:\Users\hirot\AppData\Local\Temp\xcAsueg.s
-7FD cinit CODE >818:C:\Users\hirot\AppData\Local\Temp\xcAsueg.s
-7FE cinit CODE >819:C:\Users\hirot\AppData\Local\Temp\xcAsueg.s
-7A1 text2 CODE >98:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7A2 text2 CODE >99:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7A3 text2 CODE >100:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7A8 text2 CODE >101:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7B1 text2 CODE >102:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7B2 text2 CODE >103:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7B4 text2 CODE >104:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7B5 text2 CODE >106:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7BA text2 CODE >107:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7BE text2 CODE >99:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7C7 text2 CODE >112:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-796 text1 CODE >114:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-797 text1 CODE >115:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-79C text1 CODE >116:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-79D text1 CODE >117:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7A0 text1 CODE >120:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7C8 maintext CODE >48:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7C8 maintext CODE >49:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7CB maintext CODE >50:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7CD maintext CODE >51:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7CE maintext CODE >52:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7D0 maintext CODE >53:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7D2 maintext CODE >54:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7D4 maintext CODE >55:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7D5 maintext CODE >56:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7D7 maintext CODE >57:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7D9 maintext CODE >58:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7DA maintext CODE >60:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7DD maintext CODE >61:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7DF maintext CODE >62:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7E1 maintext CODE >63:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7E3 maintext CODE >65:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7E5 maintext CODE >66:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7E7 maintext CODE >68:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7E8 maintext CODE >69:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7E9 maintext CODE >75:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7ED maintext CODE >77:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
-7F1 maintext CODE >79:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7F1 cinit CODE >798:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+7F1 cinit CODE >801:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+7F1 cinit CODE >835:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+7F2 cinit CODE >836:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+7F3 cinit CODE >837:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+7F4 cinit CODE >838:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+7F5 cinit CODE >839:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+7F6 cinit CODE >840:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+7F7 cinit CODE >841:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+7F8 cinit CODE >842:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+7F9 cinit CODE >843:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+7FC cinit CODE >847:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+7FD cinit CODE >853:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+7FD cinit CODE >855:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+7FE cinit CODE >856:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+74A text4 CODE >154:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+74B text4 CODE >155:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+750 text4 CODE >156:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+751 text4 CODE >157:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+754 text4 CODE >160:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+761 text3 CODE >115:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+761 text3 CODE >117:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+761 text3 CODE >119:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+766 text3 CODE >121:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+76F text3 CODE >122:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+770 text3 CODE >123:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+772 text3 CODE >126:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+773 text3 CODE >127:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+745 text2 CODE >110:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+745 text2 CODE >112:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+749 text2 CODE >113:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7AD text1 CODE >129:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7AD text1 CODE >130:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7AF text1 CODE >132:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7B0 text1 CODE >133:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7B4 text1 CODE >133:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7B8 text1 CODE >134:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7BC text1 CODE >135:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7C8 text1 CODE >136:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7CE text1 CODE >137:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7D2 text1 CODE >138:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7D6 text1 CODE >132:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7DD text1 CODE >145:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7E2 text1 CODE >146:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7E6 text1 CODE >147:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7EA text1 CODE >143:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7EC text1 CODE >143:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7F0 text1 CODE >153:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+774 maintext CODE >51:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+774 maintext CODE >52:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+777 maintext CODE >53:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+779 maintext CODE >54:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+77A maintext CODE >55:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+77C maintext CODE >56:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+77E maintext CODE >57:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+780 maintext CODE >58:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+781 maintext CODE >59:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+783 maintext CODE >60:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+785 maintext CODE >61:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+786 maintext CODE >63:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+789 maintext CODE >64:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+78B maintext CODE >65:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+78D maintext CODE >66:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+78F maintext CODE >76:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+793 maintext CODE >76:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+797 maintext CODE >77:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+79E maintext CODE >81:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+7A2 maintext CODE >87:D:\Users\hirot\Desktop\PIC_documents\2023\manual_rob\main.c
+755 clrtext CODE >818:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+755 clrtext CODE >819:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+756 clrtext CODE >820:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+756 clrtext CODE >821:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+757 clrtext CODE >822:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+758 clrtext CODE >823:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+759 clrtext CODE >824:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+75A clrtext CODE >825:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+75B clrtext CODE >826:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+75C clrtext CODE >827:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+75D clrtext CODE >828:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+75E clrtext CODE >829:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+75F clrtext CODE >830:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+760 clrtext CODE >831:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
+0 text0 CODE >804:C:\Users\hirot\AppData\Local\Temp\xcAs11nk.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -157,8 +195,9 @@ $dist/default/debug\manual_rob.debug.o
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 1 0 ABS 0 - dist/default/debug\manual_rob.debug.o
+_EUSART_Read EC2 0 CODE 0 text3 dist/default/debug\manual_rob.debug.o
 __Hspace_0 800 0 ABS 0 - -
-__Hspace_1 75 0 ABS 0 - -
+__Hspace_1 77 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10010 0 ABS 0 - -
@@ -168,33 +207,40 @@ _LATA 10C 0 ABS 0 - dist/default/debug\manual_rob.debug.o
 _LATB 10D 0 ABS 0 - dist/default/debug\manual_rob.debug.o
 _WPUA 20C 0 ABS 0 - dist/default/debug\manual_rob.debug.o
 _WPUB 20D 0 ABS 0 - dist/default/debug\manual_rob.debug.o
-___sp 0 0 STACK 2 stack C:\Users\hirot\AppData\Local\Temp\xcAsueg.o
-_main F90 0 CODE 0 maintext dist/default/debug\manual_rob.debug.o
+___sp 0 0 STACK 2 stack C:\Users\hirot\AppData\Local\Temp\xcAs11nk.o
+_main EE8 0 CODE 0 maintext dist/default/debug\manual_rob.debug.o
 btemp 7E 0 ABS 0 - dist/default/debug\manual_rob.debug.o
-start 6 0 CODE 0 init C:\Users\hirot\AppData\Local\Temp\xcAsueg.o
+start 6 0 CODE 0 init C:\Users\hirot\AppData\Local\Temp\xcAs11nk.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OPTION_REGbits 95 0 ABS 0 - dist/default/debug\manual_rob.debug.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\hirot\AppData\Local\Temp\xcAsueg.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\hirot\AppData\Local\Temp\xcAsueg.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\hirot\AppData\Local\Temp\xcAsueg.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\hirot\AppData\Local\Temp\xcAsueg.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\hirot\AppData\Local\Temp\xcAsueg.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\hirot\AppData\Local\Temp\xcAsueg.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\hirot\AppData\Local\Temp\xcAs11nk.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\hirot\AppData\Local\Temp\xcAs11nk.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\hirot\AppData\Local\Temp\xcAs11nk.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\hirot\AppData\Local\Temp\xcAs11nk.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\hirot\AppData\Local\Temp\xcAs11nk.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\hirot\AppData\Local\Temp\xcAs11nk.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/debug\manual_rob.debug.o
 __Hfunctab 0 0 ENTRY 0 functab -
+Receive@buf 70 0 COMMON 1 cstackCOMMON dist/default/debug\manual_rob.debug.o
+Receive@cnt 73 0 COMMON 1 cstackCOMMON dist/default/debug\manual_rob.debug.o
+Receive@rcv 74 0 COMMON 1 cstackCOMMON dist/default/debug\manual_rob.debug.o
 __Hclrtext 0 0 ABS 0 clrtext -
-_DataRead F42 0 CODE 0 text2 dist/default/debug\manual_rob.debug.o
 _ANSELA 18C 0 ABS 0 - dist/default/debug\manual_rob.debug.o
 _ANSELB 18D 0 ABS 0 - dist/default/debug\manual_rob.debug.o
-__end_of_DataRead F90 0 CODE 0 text2 dist/default/debug\manual_rob.debug.o
+__end_of_EUSART_is_rx_ready E94 0 CODE 0 text2 dist/default/debug\manual_rob.debug.o
+_Buffer 20E0 0 ABS 1 - dist/default/debug\manual_rob.debug.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\hirot\AppData\Local\Temp\xcAsueg.o
-___stacklo 0 0 ABS 0 - C:\Users\hirot\AppData\Local\Temp\xcAsueg.o
-start_initialization FF8 0 CODE 0 cinit dist/default/debug\manual_rob.debug.o
+___stackhi 0 0 ABS 0 - C:\Users\hirot\AppData\Local\Temp\xcAs11nk.o
+___stacklo 0 0 ABS 0 - C:\Users\hirot\AppData\Local\Temp\xcAs11nk.o
+_EUSART_is_rx_ready E8A 0 CODE 0 text2 dist/default/debug\manual_rob.debug.o
+start_initialization FE2 0 CODE 0 cinit dist/default/debug\manual_rob.debug.o
 _OSCCON 99 0 ABS 0 - dist/default/debug\manual_rob.debug.o
-___int_sp 0 0 STACK 2 stack C:\Users\hirot\AppData\Local\Temp\xcAsueg.o
+clear_ram0 EAA 0 CODE 0 clrtext dist/default/debug\manual_rob.debug.o
+__end_of_Receive FE2 0 CODE 0 text1 dist/default/debug\manual_rob.debug.o
+___int_sp 0 0 STACK 2 stack C:\Users\hirot\AppData\Local\Temp\xcAs11nk.o
+__end_of_EUSART_Read EE8 0 CODE 0 text3 dist/default/debug\manual_rob.debug.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -206,7 +252,6 @@ __Hbank7 0 0 BANK7 1 bank7 -
 __Hbank8 0 0 BANK8 1 bank8 -
 __Hbank9 0 0 BANK9 1 bank9 -
 __Hcinit 1000 0 CODE 0 cinit -
-main@Buffer 73 0 COMMON 1 cstackCOMMON dist/default/debug\manual_rob.debug.o
 __Hidloc 10008 0 IDLOC 5 idloc -
 __Hsfr10 0 0 ABS 0 sfr10 -
 __Hsfr11 0 0 ABS 0 sfr11 -
@@ -267,7 +312,7 @@ __Lbank6 0 0 BANK6 1 bank6 -
 __Lbank7 0 0 BANK7 1 bank7 -
 __Lbank8 0 0 BANK8 1 bank8 -
 __Lbank9 0 0 BANK9 1 bank9 -
-__Lcinit FF8 0 CODE 0 cinit -
+__Lcinit FE2 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 5 idloc -
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
@@ -292,7 +337,6 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-_INTCONbits B 0 ABS 0 - dist/default/debug\manual_rob.debug.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hheap 0 0 HEAP 7 heap -
@@ -325,13 +369,12 @@ __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __S0 800 0 ABS 0 - -
-__S1 75 0 ABS 0 - -
+__S1 77 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 DataWrite@data 70 0 COMMON 1 cstackCOMMON dist/default/debug\manual_rob.debug.o
 __Lintentry 6 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\hirot\AppData\Local\Temp\xcAsueg.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\hirot\AppData\Local\Temp\xcAs11nk.o
 _RCSTAbits 19D 0 ABS 0 - dist/default/debug\manual_rob.debug.o
-_PIE1bits 91 0 ABS 0 - dist/default/debug\manual_rob.debug.o
 _BAUDCON 19F 0 ABS 0 - dist/default/debug\manual_rob.debug.o
 __Lbank10 0 0 BANK10 1 bank10 -
 __Lbank11 0 0 BANK11 1 bank11 -
@@ -355,16 +398,17 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext F90 0 CODE 0 maintext dist/default/debug\manual_rob.debug.o
+__pmaintext EE8 0 CODE 0 maintext dist/default/debug\manual_rob.debug.o
 __Lbigram 0 0 ABS 0 bigram -
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
+__pbssBIGRAM 20E0 0 ABS 0 - dist/default/debug\manual_rob.debug.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__pbssCOMMON 74 0 COMMON 1 bssCOMMON dist/default/debug\manual_rob.debug.o
+__pbssCOMMON 76 0 COMMON 1 bssCOMMON dist/default/debug\manual_rob.debug.o
 _PIR1bits 11 0 ABS 0 - dist/default/debug\manual_rob.debug.o
 __Lend_init 6 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
@@ -372,21 +416,24 @@ end_of_initialization FFA 0 CODE 0 cinit dist/default/debug\manual_rob.debug.o
 __Hintentry 6 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 6 0 CODE 0 reset_vec -
-__ptext1 F2C 0 CODE 0 text1 dist/default/debug\manual_rob.debug.o
-__ptext2 F42 0 CODE 0 text2 dist/default/debug\manual_rob.debug.o
+_Receive F5A 0 CODE 0 text1 dist/default/debug\manual_rob.debug.o
+__ptext0 0 0 CODE 0 text0 dist/default/debug\manual_rob.debug.o
+__ptext1 F5A 0 CODE 0 text1 dist/default/debug\manual_rob.debug.o
+__ptext2 E8A 0 CODE 0 text2 dist/default/debug\manual_rob.debug.o
+__ptext3 EC2 0 CODE 0 text3 dist/default/debug\manual_rob.debug.o
+__ptext4 E94 0 CODE 0 text4 dist/default/debug\manual_rob.debug.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-DataRead@buf 71 0 COMMON 1 cstackCOMMON dist/default/debug\manual_rob.debug.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
-___heap_hi 0 0 ABS 0 - C:\Users\hirot\AppData\Local\Temp\xcAsueg.o
-___heap_lo 0 0 ABS 0 - C:\Users\hirot\AppData\Local\Temp\xcAsueg.o
+___heap_hi 0 0 ABS 0 - C:\Users\hirot\AppData\Local\Temp\xcAs11nk.o
+___heap_lo 0 0 ABS 0 - C:\Users\hirot\AppData\Local\Temp\xcAs11nk.o
 __end_of__initialization FFA 0 CODE 0 cinit dist/default/debug\manual_rob.debug.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/debug\manual_rob.debug.o
 __Hend_init A 0 CODE 0 end_init -
-__end_of_DataWrite F42 0 CODE 0 text1 dist/default/debug\manual_rob.debug.o
-__end_of_main FF8 0 CODE 0 maintext dist/default/debug\manual_rob.debug.o
+__end_of_DataWrite EAA 0 CODE 0 text4 dist/default/debug\manual_rob.debug.o
+__end_of_main F5A 0 CODE 0 maintext dist/default/debug\manual_rob.debug.o
 _RCREG 199 0 ABS 0 - dist/default/debug\manual_rob.debug.o
 _RCSTA 19D 0 ABS 0 - dist/default/debug\manual_rob.debug.o
 _SPBRG 19B 0 ABS 0 - dist/default/debug\manual_rob.debug.o
@@ -396,8 +443,8 @@ _TXREG 19A 0 ABS 0 - dist/default/debug\manual_rob.debug.o
 _TXSTA 19E 0 ABS 0 - dist/default/debug\manual_rob.debug.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-__initialization FF8 0 CODE 0 cinit dist/default/debug\manual_rob.debug.o
-_DataWrite F2C 0 CODE 0 text1 dist/default/debug\manual_rob.debug.o
+__initialization FE2 0 CODE 0 cinit dist/default/debug\manual_rob.debug.o
+_DataWrite E94 0 CODE 0 text4 dist/default/debug\manual_rob.debug.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -414,6 +461,10 @@ _DataWrite F2C 0 CODE 0 text1 dist/default/debug\manual_rob.debug.o
 # otherwise name will be "-".  The <space> number is in decimal.
 # <address> and <size> are in byte units as unqaulified hexadecimal
 %DABS
+_Buffer 1 20E0 0
+- 1 220 20
+- 1 1A0 50
+- 1 160 10
 - 1 7E 2
 # %SEGMENTS Section
 # This sections enumerates the segments of the program.  Each segment
@@ -423,12 +474,15 @@ _DataWrite F2C 0 CODE 0 text1 dist/default/debug\manual_rob.debug.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7FC FF8 4 2
-text1 0 796 F2C B 2
-text2 0 7A1 F42 27 2
-maintext 0 7C8 F90 34 2
-cstackCOMMON 1 70 70 5 1
+cinit 0 7F1 FE2 F 2
+text1 0 7AD F5A 44 2
+text2 0 745 E8A 5 2
+text3 0 761 EC2 13 2
+text4 0 74A E94 B 2
+maintext 0 774 EE8 39 2
+cstackCOMMON 1 70 70 7 1
 reset_vec 0 0 0 5 2
+clrtext 0 755 EAA C 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

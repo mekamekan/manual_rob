@@ -54,7 +54,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3225
 [; ;D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 3225: extern volatile unsigned char SPBRG __attribute__((address(0x19B)));
 [v _SPBRG `Vuc ~T0 @X0 0 e@411 ]
-"560
+"41 main.c
+[; ;main.c: 41: _Bool EUSART_is_rx_ready(void);
+[v _EUSART_is_rx_ready `(a ~T0 @X0 0 ef ]
+"43
+[; ;main.c: 43: void Receive(unsigned char *buf);
+[v _Receive `(v ~T0 @X0 0 ef1`*uc ]
+"44
+[; ;main.c: 44: void DataWrite(unsigned char data);
+[v _DataWrite `(v ~T0 @X0 0 ef1`uc ]
+[v F192 `(v ~T0 @X0 1 tf1`ul ]
+"12 D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\builtins.h
+[v __delay `JF192 ~T0 @X0 0 e ]
+[p i __delay ]
+"560 D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
 [; ;D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 560:     struct {
 [s S38 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S38 . TMR1IF TMR2IF CCP1IF SSP1IF TXIF RCIF ADIF TMR1GIF ]
@@ -65,42 +78,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "571
 [; ;D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 571: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x011)));
 [v _PIR1bits `VS37 ~T0 @X0 0 e@17 ]
-"1283
-[; ;D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1283:     struct {
-[s S75 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S75 . TMR1IE TMR2IE CCP1IE SSP1IE TXIE RCIE ADIE TMR1GIE ]
-"1282
-[; ;D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1282: typedef union {
-[u S74 `S75 1 ]
-[n S74 . . ]
-"1294
-[; ;D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1294: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x091)));
-[v _PIE1bits `VS74 ~T0 @X0 0 e@145 ]
-"358
-[; ;D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 358:     struct {
-[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S31 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
-"368
-[; ;D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 368:     struct {
-[s S32 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S32 . . T0IF . T0IE ]
-"357
-[; ;D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 357: typedef union {
-[u S30 `S31 1 `S32 1 ]
-[n S30 . . . ]
-"375
-[; ;D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 375: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
-[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"44 main.c
-[; ;main.c: 44: void DataWrite(unsigned char data);
-[v _DataWrite `(v ~T0 @X0 0 ef1`uc ]
-[v F192 `(v ~T0 @X0 1 tf1`ul ]
-"12 D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\builtins.h
-[v __delay `JF192 ~T0 @X0 0 e ]
-[p i __delay ]
-[t ~ __interrupt . k ]
-[t T2 __interrupt ]
-"3318 D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
+"3318
 [; ;D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 3318:     struct {
 [s S180 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S180 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
@@ -621,181 +599,290 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6749
 [; ;D:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 6749: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"40 main.c
-[; ;main.c: 40: unsigned char g_ReadData;
-[v _g_ReadData `uc ~T0 @X0 1 e ]
+"39 main.c
+[; ;main.c: 39: unsigned char Buffer[128];
+[v _Buffer `uc ~T0 @X0 -> 128 `i e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"48
-[; ;main.c: 48: void main(void) {
+"47
+[; ;main.c: 47: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"49
-[; ;main.c: 49:     OSCCON = 0b11110000;
+"48
+[; ;main.c: 48:     OSCCON = 0b11110000;
 [e = _OSCCON -> -> 240 `i `uc ]
-"50
-[; ;main.c: 50:     ANSELA = 0x00;
+"49
+[; ;main.c: 49:     ANSELA = 0x00;
 [e = _ANSELA -> -> 0 `i `uc ]
-"51
-[; ;main.c: 51:     ANSELB = 0x00;
+"50
+[; ;main.c: 50:     ANSELB = 0x00;
 [e = _ANSELB -> -> 0 `i `uc ]
-"52
-[; ;main.c: 52:     TRISA = 0x00;
+"51
+[; ;main.c: 51:     TRISA = 0x00;
 [e = _TRISA -> -> 0 `i `uc ]
-"53
-[; ;main.c: 53:     TRISB = 0b00000010;
+"52
+[; ;main.c: 52:     TRISB = 0b00000010;
 [e = _TRISB -> -> 2 `i `uc ]
-"54
-[; ;main.c: 54:     LATA = 0x00;
+"53
+[; ;main.c: 53:     LATA = 0x00;
 [e = _LATA -> -> 0 `i `uc ]
-"55
-[; ;main.c: 55:     LATB = 0x00;
+"54
+[; ;main.c: 54:     LATB = 0x00;
 [e = _LATB -> -> 0 `i `uc ]
-"56
-[; ;main.c: 56:     OPTION_REGbits.nWPUEN = 0;
+"55
+[; ;main.c: 55:     OPTION_REGbits.nWPUEN = 0;
 [e = . . _OPTION_REGbits 0 7 -> -> 0 `i `uc ]
-"57
-[; ;main.c: 57:     WPUA = 0x00;
+"56
+[; ;main.c: 56:     WPUA = 0x00;
 [e = _WPUA -> -> 0 `i `uc ]
-"58
-[; ;main.c: 58:     WPUB = 0x00;
+"57
+[; ;main.c: 57:     WPUB = 0x00;
 [e = _WPUB -> -> 0 `i `uc ]
-"60
-[; ;main.c: 60:     TXSTA = 0b00100100;
+"59
+[; ;main.c: 59:     TXSTA = 0b00100100;
 [e = _TXSTA -> -> 36 `i `uc ]
-"61
-[; ;main.c: 61:     RCSTA = 0b10010000;
+"60
+[; ;main.c: 60:     RCSTA = 0b10010000;
 [e = _RCSTA -> -> 144 `i `uc ]
-"62
-[; ;main.c: 62:     BAUDCON = 0b00001000;
+"61
+[; ;main.c: 61:     BAUDCON = 0b00001000;
 [e = _BAUDCON -> -> 8 `i `uc ]
-"63
-[; ;main.c: 63:     SPBRG = 68;
+"62
+[; ;main.c: 62:     SPBRG = 68;
 [e = _SPBRG -> -> 68 `i `uc ]
-"65
-[; ;main.c: 65:     PIR1bits.RCIF = 0;
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-"66
-[; ;main.c: 66:     PIE1bits.RCIE = 1;
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
-"68
-[; ;main.c: 68:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"69
-[; ;main.c: 69:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"71
-[; ;main.c: 71:     unsigned char *Buffer;
-[v _Buffer `*uc ~T0 @X0 1 a ]
-"73
-[; ;main.c: 73:     while(1){
+"64
+[; ;main.c: 64:     while(1){
 [e :U 358 ]
 {
-"75
-[; ;main.c: 75:         DataWrite('a');
-[e ( _DataWrite (1 -> -> 97 `ui `uc ]
-"76
-[; ;main.c: 76:         DataWrite(g_ReadData);
-[e ( _DataWrite (1 _g_ReadData ]
-"79
-[; ;main.c: 79:         _delay((unsigned long)((10)*(32000000/4000.0)));
+"66
+[; ;main.c: 66:         if(EUSART_is_rx_ready() != 0){
+[e $ ! != -> ( _EUSART_is_rx_ready ..  `i -> 0 `i 360  ]
+{
+"67
+[; ;main.c: 67:             Receive(Buffer);
+[e ( _Receive (1 &U _Buffer ]
+"68
+[; ;main.c: 68:             for(int i = 0; Buffer[i] != ((void*)0); i++){
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $U 364  ]
+[e :U 361 ]
+{
+"69
+[; ;main.c: 69:                 DataWrite(Buffer[i]);
+[e ( _DataWrite (1 *U + &U _Buffer * -> -> _i `ui `ux -> -> # *U &U _Buffer `ui `ux ]
+"70
+[; ;main.c: 70:             }
+}
+[e ++ _i -> 1 `i ]
+[e :U 364 ]
+[e $ != -> -> *U + &U _Buffer * -> -> _i `ui `ux -> -> # *U &U _Buffer `ui `ux `i `*v -> -> 0 `i `*v 361  ]
+[e :U 362 ]
+}
+"72
+[; ;main.c: 72:         }
+}
+[e :U 360 ]
+"74
+[; ;main.c: 74:         _delay((unsigned long)((10)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"80
-[; ;main.c: 80:     }
+"75
+[; ;main.c: 75:     }
 }
 [e :U 357 ]
 [e $U 358  ]
 [e :U 359 ]
-"81
-[; ;main.c: 81:     return;
+"76
+[; ;main.c: 76:     return;
 [e $UE 356  ]
-"82
-[; ;main.c: 82: }
+"77
+[; ;main.c: 77: }
 [e :UE 356 ]
 }
-[v $root$_ISR `(v ~T0 @X0 0 e ]
-"84
-[; ;main.c: 84: void __attribute__((picinterrupt(("")))) ISR(){
-[v _ISR `(v ~T2 @X0 1 ef ]
+"79
+[; ;main.c: 79: _Bool EUSART_is_rx_ready(void)
+[v _EUSART_is_rx_ready `(a ~T0 @X0 1 ef ]
+"80
+[; ;main.c: 80: {
 {
-[e :U _ISR ]
+[e :U _EUSART_is_rx_ready ]
 [f ]
+"81
+[; ;main.c: 81:     return (_Bool)(PIR1bits.RCIF);
+[e ) -> . . _PIR1bits 0 5 `a ]
+[e $UE 365  ]
+"82
+[; ;main.c: 82: }
+[e :UE 365 ]
+}
+"84
+[; ;main.c: 84: uint8_t EUSART_Read(void)
+[v _EUSART_Read `(uc ~T0 @X0 1 ef ]
 "85
-[; ;main.c: 85:     if(PIR1bits.RCIF){
-[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 361  ]
+[; ;main.c: 85: {
 {
+[e :U _EUSART_Read ]
+[f ]
+"86
+[; ;main.c: 86:     while(!PIR1bits.RCIF)
+[e $U 367  ]
+[e :U 368 ]
 "87
-[; ;main.c: 87:         if(RCSTAbits.FERR || RCSTAbits.OERR){
-[e $ ! || != -> . . _RCSTAbits 0 2 `i -> 0 `i != -> . . _RCSTAbits 0 1 `i -> 0 `i 362  ]
+[; ;main.c: 87:     {
 {
 "88
-[; ;main.c: 88:             RCSTA = 0x00;
-[e = _RCSTA -> -> 0 `i `uc ]
-"89
-[; ;main.c: 89:             RCSTA = 0x90;
-[e = _RCSTA -> -> 144 `i `uc ]
+[; ;main.c: 88:     }
+}
+[e :U 367 ]
+"86
+[; ;main.c: 86:     while(!PIR1bits.RCIF)
+[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 368  ]
+[e :U 369 ]
 "90
-[; ;main.c: 90:         }
-}
-[e $U 363  ]
+[; ;main.c: 90:     if(RCSTAbits.FERR || RCSTAbits.OERR){
+[e $ ! || != -> . . _RCSTAbits 0 2 `i -> 0 `i != -> . . _RCSTAbits 0 1 `i -> 0 `i 370  ]
+{
 "91
-[; ;main.c: 91:         else
-[e :U 362 ]
+[; ;main.c: 91:             RCSTA = 0x00;
+[e = _RCSTA -> -> 0 `i `uc ]
 "92
-[; ;main.c: 92:             g_ReadData = RCREG;
-[e = _g_ReadData _RCREG ]
-[e :U 363 ]
-"94
-[; ;main.c: 94:     }
+[; ;main.c: 92:             RCSTA = 0x90;
+[e = _RCSTA -> -> 144 `i `uc ]
+"93
+[; ;main.c: 93:     }
 }
-[e $U 364  ]
+[e :U 370 ]
 "95
-[; ;main.c: 95:     else;
-[e :U 361 ]
-[e :U 364 ]
+[; ;main.c: 95:     return RCREG;
+[e ) _RCREG ]
+[e $UE 366  ]
 "96
 [; ;main.c: 96: }
-[e :UE 360 ]
+[e :UE 366 ]
 }
+"98
+[; ;main.c: 98: void Receive(unsigned char *buf){
+[v _Receive `(v ~T0 @X0 1 ef1`*uc ]
+{
+[e :U _Receive ]
+[v _buf `*uc ~T0 @X0 1 r1 ]
+[f ]
+"99
+[; ;main.c: 99:     unsigned char rcv = ((void*)0), cnt = 0;
+[v _rcv `uc ~T0 @X0 1 a ]
+[e = _rcv -> -> -> 0 `i `*v `uc ]
+[v _cnt `uc ~T0 @X0 1 a ]
+[e = _cnt -> -> 0 `i `uc ]
+"101
+[; ;main.c: 101:     while(rcv != '\n'){
+[e $U 372  ]
+[e :U 373 ]
+{
+"102
+[; ;main.c: 102:         if(EUSART_is_rx_ready() != 0){
+[e $ ! != -> ( _EUSART_is_rx_ready ..  `i -> 0 `i 375  ]
+{
+"103
+[; ;main.c: 103:             rcv = EUSART_Read();
+[e = _rcv ( _EUSART_Read ..  ]
+"104
+[; ;main.c: 104:             if((rcv != '\n') && (rcv != '\r')){
+[e $ ! && != -> _rcv `ui -> 10 `ui != -> _rcv `ui -> 13 `ui 376  ]
+{
+"105
+[; ;main.c: 105:                 *buf = rcv;
+[e = *U _buf _rcv ]
+"106
+[; ;main.c: 106:                 buf++;
+[e ++ _buf * -> -> 1 `i `x -> -> # *U _buf `i `x ]
+"107
+[; ;main.c: 107:                 cnt++;
+[e ++ _cnt -> -> 1 `i `uc ]
+"108
+[; ;main.c: 108:             }
+}
+[e :U 376 ]
+"109
+[; ;main.c: 109:         }
+}
+[e :U 375 ]
+"110
+[; ;main.c: 110:     }
+}
+[e :U 372 ]
+"101
+[; ;main.c: 101:     while(rcv != '\n'){
+[e $ != -> _rcv `ui -> 10 `ui 373  ]
+[e :U 374 ]
+"112
+[; ;main.c: 112:     while(cnt < 32){
+[e $U 377  ]
+[e :U 378 ]
+{
 "114
-[; ;main.c: 114: void DataWrite(unsigned char data){
+[; ;main.c: 114:         *buf = ((void*)0);
+[e = *U _buf -> -> -> 0 `i `*v `uc ]
+"115
+[; ;main.c: 115:         cnt++;
+[e ++ _cnt -> -> 1 `i `uc ]
+"116
+[; ;main.c: 116:         buf++;
+[e ++ _buf * -> -> 1 `i `x -> -> # *U _buf `i `x ]
+"118
+[; ;main.c: 118:     }
+}
+[e :U 377 ]
+"112
+[; ;main.c: 112:     while(cnt < 32){
+[e $ < -> _cnt `i -> 32 `i 378  ]
+[e :U 379 ]
+"120
+[; ;main.c: 120:     return;
+[e $UE 371  ]
+"121
+[; ;main.c: 121: }
+[e :UE 371 ]
+}
+"122
+[; ;main.c: 122: void DataWrite(unsigned char data){
 [v _DataWrite `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _DataWrite ]
 [v _data `uc ~T0 @X0 1 r1 ]
 [f ]
-"115
-[; ;main.c: 115:     while(!PIR1bits.TXIF);
-[e $U 366  ]
-[e :U 367 ]
-[e :U 366 ]
-[e $ ! != -> . . _PIR1bits 0 4 `i -> 0 `i 367  ]
-[e :U 368 ]
-"116
-[; ;main.c: 116:     PIR1bits.TXIF = 0;
+"123
+[; ;main.c: 123:     while(!PIR1bits.TXIF);
+[e $U 381  ]
+[e :U 382 ]
+[e :U 381 ]
+[e $ ! != -> . . _PIR1bits 0 4 `i -> 0 `i 382  ]
+[e :U 383 ]
+"124
+[; ;main.c: 124:     PIR1bits.TXIF = 0;
 [e = . . _PIR1bits 0 4 -> -> 0 `i `uc ]
-"117
-[; ;main.c: 117:     TXREG = data;
+"125
+[; ;main.c: 125:     TXREG = data;
 [e = _TXREG _data ]
-"119
-[; ;main.c: 119:     return;
-[e $UE 365  ]
-"120
-[; ;main.c: 120: }
-[e :UE 365 ]
+"127
+[; ;main.c: 127:     return;
+[e $UE 380  ]
+"128
+[; ;main.c: 128: }
+[e :UE 380 ]
 }
-"146
-[; ;main.c: 146: void putch(unsigned char data){
+"130
+[; ;main.c: 130: void putch(unsigned char data){
 [v _putch `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _putch ]
 [v _data `uc ~T0 @X0 1 r1 ]
 [f ]
-"147
-[; ;main.c: 147:     DataWrite(data);
+"131
+[; ;main.c: 131:     DataWrite(data);
 [e ( _DataWrite (1 _data ]
-"148
-[; ;main.c: 148: }
-[e :UE 369 ]
+"132
+[; ;main.c: 132: }
+[e :UE 384 ]
 }

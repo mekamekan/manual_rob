@@ -4508,15 +4508,16 @@ char *tempnam(const char *, const char *);
 # 35 "main.c" 2
 
 
+# 1 "D:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdbool.h" 1 3
+# 37 "main.c" 2
 
 
+unsigned char Buffer[128];
 
-unsigned char g_ReadData;
-
-
-void __attribute__((picinterrupt(("")))) ISR();
+_Bool EUSART_is_rx_ready(void);
+uint8_t EUSART_Read(void);
+void Receive(unsigned char *buf);
 void DataWrite(unsigned char data);
-
 void putch(unsigned char data);
 
 void main(void) {
@@ -4536,39 +4537,64 @@ void main(void) {
     BAUDCON = 0b00001000;
     SPBRG = 68;
 
-    PIR1bits.RCIF = 0;
-    PIE1bits.RCIE = 1;
-
-    INTCONbits.PEIE = 1;
-    INTCONbits.GIE = 1;
-
-    unsigned char *Buffer;
-
     while(1){
 
-        DataWrite('a');
-        DataWrite(g_ReadData);
+        if(EUSART_is_rx_ready() != 0){
+            Receive(Buffer);
+            for(int i = 0; Buffer[i] != ((void*)0); i++){
+                DataWrite(Buffer[i]);
+            }
 
+        }
 
         _delay((unsigned long)((10)*(32000000/4000.0)));
     }
     return;
 }
 
-void __attribute__((picinterrupt(("")))) ISR(){
-    if(PIR1bits.RCIF){
+_Bool EUSART_is_rx_ready(void)
+{
+    return (_Bool)(PIR1bits.RCIF);
+}
 
-        if(RCSTAbits.FERR || RCSTAbits.OERR){
+uint8_t EUSART_Read(void)
+{
+    while(!PIR1bits.RCIF)
+    {
+    }
+
+    if(RCSTAbits.FERR || RCSTAbits.OERR){
             RCSTA = 0x00;
             RCSTA = 0x90;
+    }
+
+    return RCREG;
+}
+
+void Receive(unsigned char *buf){
+    unsigned char rcv = ((void*)0), cnt = 0;
+
+    while(rcv != '\n'){
+        if(EUSART_is_rx_ready() != 0){
+            rcv = EUSART_Read();
+            if((rcv != '\n') && (rcv != '\r')){
+                *buf = rcv;
+                buf++;
+                cnt++;
+            }
         }
-        else
-            g_ReadData = RCREG;
+    }
+
+    while(cnt < 32){
+
+        *buf = ((void*)0);
+        cnt++;
+        buf++;
 
     }
-    else;
+
+    return;
 }
-# 114 "main.c"
 void DataWrite(unsigned char data){
     while(!PIR1bits.TXIF);
     PIR1bits.TXIF = 0;
@@ -4576,7 +4602,7 @@ void DataWrite(unsigned char data){
 
     return;
 }
-# 146 "main.c"
+
 void putch(unsigned char data){
     DataWrite(data);
 }
